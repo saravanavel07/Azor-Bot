@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    background-color: #030503;
+    color: #F7FAF6;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.9375rem; /* 15px - standard, normal, comfortable body size */
+    line-height: 1.6;
+    color: #F7FAF6; /* Crisp coconut flesh white/cream */
+    background-color: #030503; /* Deep Pitch Black */
+  }
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875rem; /* 14px - standard monospace font size */
+    line-height: 1.5;
+  }
+}
+
+/*
+ * Global CSS Rule:
+ * Ensure that all interactive elements such as buttons, navigation tabs, and inputs
+ * maintain a consistent, standard font size of 15px (0.9375rem) regardless of
+ * state transitions, hover states, active states, focus states, or click events.
+ */
+button,
+input,
+select,
+textarea,
+[role="button"],
+[role="tab"],
+nav button,
+nav a,
+.nav-tab,
+.btn-interactive,
+button:hover,
+button:active,
+button:focus,
+button:focus-visible,
+button:visited,
+button:disabled,
+input:hover,
+input:focus,
+input:active,
+select:hover,
+select:focus,
+select:active,
+textarea:hover,
+textarea:focus,
+textarea:active,
+[role="button"]:hover,
+[role="button"]:active,
+[role="button"]:focus,
+[role="tab"]:hover,
+[role="tab"]:active,
+[role="tab"]:focus,
+nav button:hover,
+nav button:active,
+nav button:focus {
+  font-size: 0.9375rem !important; /* Fixed 15px across all states */
+}
+
+/* Custom glowing scrollbar in Coconut Green & Coconut Brown on black */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080B08;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E7D32; /* Tender Coconut Green */
+  border-radius: 9999px;
+  box-shadow: 0 0 6px rgba(46, 125, 50, 0.4);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22C55E; /* Bright Coconut Green highlight */
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+/* High-motion glowing pulse utilities */
+@keyframes cyberGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.15), inset 0 0 15px rgba(34, 197, 94, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.35), inset 0 0 20px rgba(34, 197, 94, 0.1);
+  }
+}
+
+.cyber-glow {
+  animation: cyberGlow 3s ease-in-out infinite;
+}
+
+@keyframes laserScan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.laser-scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #22C55E, #D97706, transparent);
+  animation: laserScan 4s linear infinite;
+  opacity: 0.35;
+  pointer-events: none;
+}

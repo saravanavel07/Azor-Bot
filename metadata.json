@@ -1,0 +1,6 @@
+{
+  "name": "MaltCache AI",
+  "description": "Advanced CAG + RAG Intelligence Platform combining semantic cache-augmented generation and document-grounded retrieval.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
